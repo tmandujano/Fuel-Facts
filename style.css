@@ -1,0 +1,31 @@
+#header{
+    background-color: silver;
+    color: 0D41A8;
+    text-align: center;
+}
+
+footer{
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+#Copyright{
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+#Contact{
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+#Client_Info{
+    color: black;
+    text-align: center;
+    margin-top: 150px;
+}
+#clientmain{
+    background-color: silver;
+    }

@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fuel Facts: Quote Hsitory</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<h2><font face="bookman bold" color="0D41A8">Fuel Facts</font></h2>
+<h3><font face="bookman bold" color="green">Quote History</font></h3>
+
+  <ul class="nav nav-pills">
+    <li class="active"><a href="Fuel Facts.html">Home</a></li>
+    <li><a href="Client_Information.html">Client Information</a></li>
+    <li><a href="Request a Quote.html">Request a Quote</a></li>
+    <li><a href="Quote_History.html">Quote History</a></li>
+  </ul>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Your Quote History</h2>
+  <p>Search by item #, requested date, delivery date, gallons, rate or total price:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Item Number</th>
+        <th>Requested Date</th>
+        <th>Delivery Date</th>
+        <th>Gallons</th>
+        <th>Rate</th>
+        <th>Total Prices</th>
+      </tr>
+    </thead>
+    <tbody id="QuoteHistoryTable">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#QuoteHistoryTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</body>
+</html>
