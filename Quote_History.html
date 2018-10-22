@@ -131,5 +131,30 @@ $(document).ready(function(){
   });
 });
 </script>
+ 
+<!--attempted to go off the video example that was posted on the groupme, 
+  basically pulling data from .json to be shown on to the html file -->
+<script>
+  $(document).ready(function())
+  {
+    $.getJSON(".json", function(data)  //create json file retreiving data from
+    {
+      var quote_history_data = '';     //create quote_history_data
+      $.each(data, function(key, value))
+      {
+        quote_history_data += '<tr>';
+        quote_history_data += '<td>'+value.itemnumber+'</td>';   
+        quote_history_data += '<td>'+value.requesteddate+'</td>'; 
+        quote_history_data += '<td>'+value.deliverydate+'</td>';
+        quote_history_data += '<td>'+value.gallons+'</td>';
+        quote_history_data += '<td>'+value.rate+'</td>';
+        quote_history_data += '<td>'+value.totalprice+'</td>';
+        quote_history_data += '</tr>';
+      });
+      $('#QuoteHistoryTable').append(quote_history_data);
+    });
+  });
+</script>
+  
 </body>
 </html>
