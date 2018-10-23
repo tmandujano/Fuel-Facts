@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fuel Facts: Request a Quote</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+  <h2><font face="bookman bold" color="0D41A8">Fuel Facts</font></h2>
+  <h3><font face="bookman bold" color="green">Request a Quote</font></h3>
+  <ul class="nav nav-pills">
+    <li class="active"><a href="Fuel Facts.html">Home</a></li>
+    <li><a href="Client_Information.html">Client Information</a></li>
+    <li><a href="Request a Quote.html">Request a Quote</a></li>
+    <li><a href="Quote_History.html">Quote History</a></li>
+  </ul>
+  </div>
+
+
+
+</body>
+
+
+
+<body>
+  <div class="container">
+
+
+
+  <form id="RaQ">
+  
+    Gallons Requested:
+    <input type="number"  id="GallonsRequested" placeholder="Ex: 12.00, 12.25">
+    <br>
+
+    Delivery Date:
+    <input type="date"  id="DeliveryDate">
+    <br>
+
+    Delivery Location:
+    <input type="text" id="deliveryLocation" placeholder="Address, City, State, Zip">
+    <br>
+
+    Delivery Contact Person Name:
+    <input type="text" id="deliveryName" pattern="[a-zA-Z]" placeholder="Firstname Lastname">
+    <br>
+
+    Delivery Contact Person Phone:
+    <input type="text" id="deliveryPhone" placeholder="0123456789">
+    <br>
+
+    Delivery Contact Person Email :
+    <input type="email" id="deliveryEmail" placeholder="someone@email.com">
+    <br>
+
+    Suggested Price Per Gallon:
+    <output type="number" id="suggestedPrice">
+
+    Total Amount Due:
+    <output type="number" id="amountDue">
+    <br>
+
+    <input type="button" onclick="requestQuote()" value="Submit">
+
+  </form>
+  </div>  
+</body>
+
+
+<p id="demo"> </p>
+
+<script
+  src="javascript.js">
+</script>
+
+</html>
+
+
