@@ -3,6 +3,9 @@
 <head>
   <title>Fuel Facts: Client Information</title>
 
+  <!---Background-->
+  <body background="oil2.jpg">
+
   <meta charset="utf-8">
   <link
   rel="stylesheet"
@@ -31,24 +34,80 @@
     <li><a href="Quote_History.html">Quote History</a></li>
   </ul>
 
-  <h3><font face="bookman bold" size="8" color="green">Client Information<img src="client_icon.png" alt="client icon" width="40" height="40" align="center"></font></h3>
+  <h3><font face="bookman bold" size="8" color="black">Client Information<img src="client_icon.png" alt="client icon" width="40" height="40" align="center"></font></h3>
 
 </div>
 
 </body>
 
-<body>
-  <div>
-    <p id= Client_Info>
-      Name: Jonathon Nguyen<br>
-      Name: Tania Mandujano<br>
-      Address: 601 University Drive, San Marcos, Texas, 78666<br>
-      Phone: 512- 123-4567<br>
-      Email: abc123@email.com<br>
-   </p>
-   
-  </div>
 
+
+  <!---->
+
+   
+    <head>
+       <title>PHP Form Validation</title>
+    </head>
+    
+    <body>
+       <?php
+          
+          // define variables and set to empty values
+          $name = $email = $gender = $comment = $website = "";
+          
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+             $name = test_input($_POST["name"]);
+             $email = test_input($_POST["email"]);
+             $website = test_input($_POST["website"]);
+             $comment = test_input($_POST["comment"]);
+             $gender = test_input($_POST["gender"]);
+          }
+          
+          function test_input($data) {
+             $data = trim($data);
+             $data = stripslashes($data);
+             $data = htmlspecialchars($data);
+             return $data;
+          }
+       ?>
+       <p align="center">
+       <form method = "post" action = "/php/php_form_introduction.htm">
+          <table>
+             <tr>
+                <td align="center">Name:</td> 
+                <td><input type = "text" name = "name"></td>
+             </tr>
+             
+             <tr>
+                <td>Address:</td>
+                <td><input type = "text" name = "clientAddress"></td>
+             </tr>
+             
+             <tr>
+                <td>Phone:</td>
+                <td><input type = "text" name = "clientPhone"></td>
+             </tr>
+             
+             <tr>
+                <td>Email:</td>
+                <td><input type = "text" name = "clientEmail"></td>
+             </tr>
+             
+             <tr>
+                <td>
+                   <input type = "submit" name = "submit" value = "Submit"> 
+                </td>
+             </tr>
+          </table>
+       </form>
+      </p>
+       
+
+    
+
+  
+ 
+ <!----> 
   <footer>
     <p
     id="Copyright">Copyright@2018</p>
@@ -62,5 +121,4 @@
 
 </body>
 </html>
-
 
